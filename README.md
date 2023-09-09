@@ -5,6 +5,33 @@ Semaphores are synchronization primitives used to control access to shared resou
 
 This repository provides a custom implementation of semaphores using POSIX threads, mutex locks, and condition variables. Dive in to explore the exciting world of concurrency in C!
 
+```
+
+   +------------------------------------+
+   |        Custom Semaphore             |
+   +------------------------------------+
+   |                                    |
+   |  +----------------------+          |
+   |  |      Permit Counter |----+      |
+   |  +----------------------+    |      |
+   |  +----------------------+    | Decrement/Increment |
+   |  |        Mutex        |<---+      |
+   |  +----------------------+          |
+   |  +----------------------+          |
+   |  |    Condition Var    |<---+      |
+   |  +----------------------+    | Signal/Wait |
+   |                                    |
+   +------------------------------------+
+               ^     ^
+               |     | Interaction
+               |     |
++-------------+ +-----------+ +-----------+
+|   Thread A  | | Thread B | | Thread C  |
++-------------+ +-----------+ +-----------+
+
+
+```
+
 # Semaphore Implementation and Demonstration 🚦
 
  In computer science, semaphores are a powerful synchronization primitive used for controlling access to shared resources in concurrent systems.
