@@ -1,6 +1,6 @@
 # SemaphoreExplained
 
-# 📝 Interview Revision Notes: Types of Semaphores 🚦
+# 📝 Types of Semaphores 🚦
 
 ## Introduction 🌐
 Semaphores are crucial for ensuring thread and process synchronization. They can be divided into two primary types: unnamed semaphores and named semaphores.
